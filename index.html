@@ -80,6 +80,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <h1>Simple Searchable DropDown</h1>
+  <p>This DropDown contains the acronyms of the States of Brazil</p>
+  <div class="cbb">
+    <div class="cbb-search-wrapper">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <input type="text" placeholder="Type to Search" />
+      <a href='#'>
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="cbb-content">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+      </ul>
+    </div>
+  </div>
+  <span class="span"></span>
+  <p>Standard DropDown:</p>
+  <select class="ddb">
+    <option>--</option>
+    <option>AC</option>
+    <option>AL</option>
+    <option>AP</option>
+    <option>AM</option>
+    <option>BA</option>
+    <option>CE</option>
+    <option>DF</option>
+    <option>ES</option>
+    <option>GO</option>
+    <option>MA</option>
+    <option>MT</option>
+    <option>MS</option>
+    <option>MG</option>
+    <option>PA</option>
+    <option>PB</option>
+    <option>PR</option>
+    <option>PE</option>
+    <option>PI</option>
+    <option>RJ</option>
+    <option>RN</option>
+    <option>RS</option>
+    <option>RO</option>
+    <option>RR</option>
+    <option>SC</option>
+    <option>SP</option>
+    <option>SE</option>
+    <option>TO</option>
+  </select>
+  
   <script>
     window.onload = function () {
       const cbb = document.getElementsByClassName('cbb')[0];
@@ -296,57 +349,5 @@
 	  }
 	}
   </script>
-  <h1>Simple Searchable DropDown</h1>
-  <p>This DropDown contains the acronyms of the States of Brazil</p>
-  <div class="cbb">
-    <div class="cbb-search-wrapper">
-      <i class="fa fa-search" aria-hidden="true"></i>
-      <input type="text" placeholder="Type to Search" />
-      <a href='#'>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-      </a>
-    </div>
-    <div class="cbb-content">
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-      </ul>
-    </div>
-  </div>
-  <span class="span"></span>
-  <p>Standard DropDown:</p>
-  <select class="ddb">
-    <option>--</option>
-    <option>AC</option>
-    <option>AL</option>
-    <option>AP</option>
-    <option>AM</option>
-    <option>BA</option>
-    <option>CE</option>
-    <option>DF</option>
-    <option>ES</option>
-    <option>GO</option>
-    <option>MA</option>
-    <option>MT</option>
-    <option>MS</option>
-    <option>MG</option>
-    <option>PA</option>
-    <option>PB</option>
-    <option>PR</option>
-    <option>PE</option>
-    <option>PI</option>
-    <option>RJ</option>
-    <option>RN</option>
-    <option>RS</option>
-    <option>RO</option>
-    <option>RR</option>
-    <option>SC</option>
-    <option>SP</option>
-    <option>SE</option>
-    <option>TO</option>
-  </select>
 </body>
 </html>
