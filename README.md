@@ -1,2 +1,7 @@
 # Simple Searchable Dropdown
-A custom drop down with a search text field
+## Introduction
+I just wanted to build with my own hands a custom dropdown with a search text field. Zero Frameworks. Just Code. The objective is to test my skills and me.
+## Ok, so what's next?
+The next step is to transform this code into a Component to be reused, I'm not so sure how to make a Web Component but I still researching. 
+
+In my mind, that mustn't depend on any Framework.
