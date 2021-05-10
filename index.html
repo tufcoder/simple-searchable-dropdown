@@ -10,50 +10,50 @@
     body {
       color: #000;
     }
-    
+
     a {
       color: inherit;
     }
-    
+
     .ddb {
       width: 200px;
     }
-    
+
     .ddn {
       width: 200px;
       border: 1px solid #000;
       position: relative;
       display: inline-block;
     }
-    
+
     .ddn input {
       width: 155px;
       border: none;
     }
-    
+
     .ddn ul {
       margin: 0;
       padding: 0;
     }
-    
+
     .ddn ul li {
       padding-left: 3px;
       list-style: none;
       text-decoration: none;
       cursor: default;
     }
-    
+
     .ddn ul li:hover, .selected-option {
       color: #fff;
       background-color: rgb(66, 140, 245);
     }
-    
+
     .ddn-search-wrapper {
       display: flex;
       justify-content: space-between;
       padding: 1px;
     }
-    
+
     .ddn-content {
       display: none;
       border: 1px solid #000;
@@ -63,7 +63,7 @@
       width: inherit;
       background-color: #fff;
     }
-    
+
     .span {
       color: rgb(0, 0, 139);
     }
@@ -122,18 +122,18 @@
     <option>SE</option>
     <option>TO</option>
   </select>
-  
+
   <script>
     window.onload = function () {
       const ddn = document.getElementsByClassName('ddn')[0];
       const ddnSearchWrapper = ddn.getElementsByClassName('ddn-search-wrapper')[0];
       const ddnContent = document.getElementsByClassName('ddn-content')[0];
       const items = ddnContent.getElementsByTagName('li');
-      
+
       const arrowDown = ddnSearchWrapper.getElementsByTagName('a')[0];
       arrowDown.setAttribute('onclick', 'return false;');
       arrowDown.addEventListener('click', ARROW_DOW_CLICK);
-      
+
       const values = [
         '--'
         ,'AC'
@@ -166,48 +166,48 @@
       ];
 
       fillDropDown(values);
-      
+
       const input = ddnSearchWrapper.getElementsByTagName('input')[0];
       input.addEventListener('input', function(evt) { INPUT_TEXT(values, input) });
     }
-    
+
     function ARROW_DOW_CLICK() {
       const ddnContent = document.getElementsByClassName('ddn-content')[0];
       const ddn = document.getElementsByClassName('ddn')[0];
       const ddnSearchWrapper = ddn.getElementsByClassName('ddn-search-wrapper')[0];
       const input = ddnSearchWrapper.getElementsByTagName('input')[0];
-      
+
       ddnContent.style.display = ddnContent.style.display === 'block' ? 'none' : 'block';
       SELECTED_OPTION(input.value);
     }
-    
+
     function INPUT_TEXT(values, input) {
       fillDropDown(values, input.value.toUpperCase());
     }
-    
+
     function SELECTED_OPTION(value) {
       const container = document.getElementsByClassName('ddn-content')[0];
       const list = container.getElementsByTagName('li');
-      
+
       for(let i = 0; i < list.length; i++) {
         list[i].className = '';
-        
+
         if(list[i].innerText === value) {
           list[i].className = 'selected-option';
         }
       }
     }
-    
+
     function fillDropDown(values, search) {
       const container = document.getElementsByClassName('ddn-content')[0];
       const list = container.getElementsByTagName('li');
-      
+
       if(list !== undefined || list !== null) {
         while(list.length > 0) {
           container.getElementsByTagName('ul')[0].removeChild(list[list.length-1]);
         }
       }
-      
+
       if(search !== undefined) {
         let newValues = [];
         for(let i = 0; i < values.length; i++) {
@@ -221,7 +221,7 @@
         fillDropDown(newValues);
         return false;
       }
-      
+
       for (let i = 0; i < values.length; i++) {
         const el = document.createElement('li');
         el.innerText = values[i];
@@ -230,7 +230,7 @@
           SELECTED_OPTION(this.innerText);
           ARROW_DOW_CLICK();
         });
-        
+
         el.addEventListener('mouseenter', function () {
           for(let i = 0; i < list.length; i++) {
             list[i].className = '';
@@ -239,20 +239,20 @@
         container.getElementsByTagName('ul')[0].appendChild(el);
       }
     }
-    
+
     function fillInputText(value) {
       const ddn = document.getElementsByClassName('ddn')[0];
       const ddnSearchWrapper = ddn.getElementsByClassName('ddn-search-wrapper')[0];
       const input = ddnSearchWrapper.getElementsByTagName('input')[0];
       input.value = value;
-      
+
       fillSpan(input.value);
     }
-    
+
     function fillSpan(value) {
       const span = document.getElementsByClassName('span')[0];
       const msg = ' is the State of ';
-      
+
       switch(value) {
         case 'AC':
           span.innerText = value + msg + 'Acre, its capital is Rio Branco';
