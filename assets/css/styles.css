@@ -1,0 +1,56 @@
+body {
+  color: #000;
+}
+
+a {
+  color: inherit;
+}
+
+.ddn {
+  width: 200px;
+  border: 1px solid #000;
+  position: relative;
+  display: inline-block;
+}
+
+.ddn input {
+  width: 155px;
+  border: none;
+}
+
+.ddn ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ddn ul li {
+  padding-left: 3px;
+  list-style: none;
+  text-decoration: none;
+  cursor: default;
+}
+
+.ddn ul li:hover, .selected-option {
+  color: #fff;
+  background-color: rgb(66, 140, 245);
+}
+
+.ddn-search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+.ddn-content {
+  display: none;
+  border: 1px solid #000;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  width: inherit;
+  background-color: #fff;
+}
+
+.span {
+  color: rgb(0, 0, 139);
+}
